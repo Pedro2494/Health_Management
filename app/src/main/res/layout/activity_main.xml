@@ -37,6 +37,7 @@
         android:textSize="16sp" />
 
     <EditText
+
         android:layout_marginTop="8dp"
         android:id="@+id/nome_paciente"
         android:layout_width="match_parent"
@@ -159,6 +160,22 @@
         android:inputType="text"
         android:text="" />
 
+    <TextView
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/descri_o_dos_sintomas"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_marginTop="8dp"
+        android:id="@+id/descricao_sintomas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -170,6 +187,7 @@
         android:textSize="16sp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:onClick="submeter"
         />
 
 
