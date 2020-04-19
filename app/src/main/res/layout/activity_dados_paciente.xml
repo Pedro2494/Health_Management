@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:textSize="16sp"
-        android:text="Paciente" />
+        android:text="" />
 </LinearLayout>
 
     <LinearLayout
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textSize="16sp"
-            android:text="Idade" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textSize="16sp"
-            android:text="sexo" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textSize="16sp"
-            android:text="dd/mm/aaaa" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textSize="16sp"
-            android:text="emergencia" />
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -131,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:textSize="16sp"
-            android:text="cc" />
+            android:text="" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -164,7 +164,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="sint" />
+        android:text="" />
 
     <TextView
         android:layout_marginTop="8dp"
@@ -179,5 +179,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="desc" />
+        android:text="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#00008B" />
 </LinearLayout>

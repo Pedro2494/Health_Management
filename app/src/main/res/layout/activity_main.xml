@@ -75,17 +75,21 @@
         android:layout_marginTop="8dp">
 
         <CheckBox
+            android:id="@+id/masculino"
             android:textColor="#000000"
             android:layout_width="110dp"
             android:layout_height="25dp"
             android:textSize="16sp"
+
             android:text="@string/masculino" />
 
         <CheckBox
+            android:id="@+id/feminino"
             android:textColor="#000000"
             android:textSize="16sp"
             android:layout_width="105dp"
             android:layout_height="25dp"
+
             android:layout_marginStart="40dp"
             android:text="@string/feminino" />
     </LinearLayout>
