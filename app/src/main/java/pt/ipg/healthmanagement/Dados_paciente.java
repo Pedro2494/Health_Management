@@ -48,6 +48,10 @@ public class Dados_paciente extends AppCompatActivity {
         TextView DescricaoSintoma = (TextView) findViewById(R.id.textViewSintomaDesc);
         DescricaoSintoma.setText(descricaosintoma);
 
+        String moradap = intent.getStringExtra("morada_P");
+        TextView Morada = (TextView)findViewById(R.id.textViewMorada);
+        Morada.setText(moradap);
+
         textView = (TextView) findViewById(R.id.textViewSexo);
 
         StringBuilder str = new StringBuilder("");

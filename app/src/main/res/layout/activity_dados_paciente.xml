@@ -11,7 +11,7 @@
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Dados do Paciente"
+    android:text="@string/dados_do_paciente"
     android:textAlignment="center"
     android:textSize="20sp"/>
 
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="Nome:"/>
+        android:text="@string/nome"/>
 
     <TextView
         android:id="@+id/textViewNome"
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Idade:"/>
+            android:text="@string/idade"/>
 
         <TextView
             android:id="@+id/textViewIdade"
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Sexo:"/>
+            android:text="@string/g_nero"/>
 
         <TextView
             android:id="@+id/textViewSexo"
@@ -85,7 +85,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Data de nascimento:"/>
+            android:text="@string/data_de_nascimento"/>
 
         <TextView
             android:id="@+id/textViewDataNas"
@@ -104,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Contacto de emergencia:"/>
+            android:text="@string/contacto_de_emerg_ncia"/>
 
         <TextView
             android:id="@+id/textViewContacto"
@@ -116,6 +116,26 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/morada"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewMorada"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="24dp">
@@ -123,7 +143,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Numero de cc:"/>
+            android:text="@string/numero_de_cc"/>
 
         <TextView
             android:id="@+id/textViewcartao"
@@ -132,7 +152,10 @@
             android:layout_marginStart="8dp"
             android:textSize="16sp"
             android:text="" />
+
     </LinearLayout>
+
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -156,7 +179,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="Sintomas:"/>
+        android:text="@string/sintomas"/>
 
     <TextView
         android:layout_marginTop="8dp"
@@ -171,7 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:text="Detalhes dos sintomas:"/>
+        android:text="@string/detalhes_dos_sintomas"/>
 
     <TextView
         android:layout_marginTop="8dp"
@@ -186,4 +209,105 @@
         android:layout_height="1dp"
         android:layout_marginTop="8dp"
         android:background="#00008B" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/profissional_de_saude_responsav_l"
+        android:gravity="center"
+        android:textColor="#191970"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/campos_a_preencher"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#00008B" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/nome"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/NomePro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/fun_o_a_exercer"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/textViewFuncaoPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#00008B" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tratamento"
+        android:gravity="center"
+        android:textColor="#191970"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/campos_a_preencher"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#00008B" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/medica_o"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/ListaMedicamento"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f00"
+        android:dividerHeight="1dp" />
+    <TextView
+        android:id="@+id/textViewLista"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#000000" />
+
+
 </LinearLayout>

@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         String descricao_Sintoma = SintomaDescricao.getText().toString();
         intent.putExtra("descricao_Sintoma", descricao_Sintoma);
 
+        EditText Morada =(EditText)findViewById(R.id.morada);
+        String morada_P= Morada.getText().toString();
+        intent.putExtra("morada_P",morada_P);
 
         //validar dados
 
@@ -104,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
         if (descricao_Sintoma.length() <= 0) {
             SintomaDescricao.setError("Campo obrigatório");
             SintomaDescricao.requestFocus();
+            return;
+        }
+
+        if(morada_P.length() <=0){
+            Morada.setError("Campo obrigatório");
+            Morada.requestFocus();
             return;
         }
 

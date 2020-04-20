@@ -1,15 +1,31 @@
 <resources>
     <string name="app_name">Health Management</string>
     <string name="registar_paciente">Registar paciente</string>
-    <string name="nome">Nome:</string>
-    <string name="idade">Idade:</string>
+
+
     <string name="sexo">Sexo:</string>
     <string name="masculino">Masculino</string>
     <string name="feminino">Feminino</string>
-    <string name="data_de_nascimento">Data de nascimento:</string>
+
     <string name="contacto_de_emergencia">Contacto de emergencia:</string>
     <string name="numero_de_cart_o_de_cidad_o">Numero de cartão de cidadão:</string>
-    <string name="sintomas">Sintomas:</string>
+
     <string name="submeter">Submeter</string>
     <string name="descri_o_dos_sintomas">Descrição dos sintomas:</string>
+    <string name="campos_a_preencher">Campos a preencher:</string>
+
+    <string name="profissional_de_saude_responsav_l">Profissional de saude responsavél:</string>
+    <string name="morada">Morada:</string>
+    <string name="numero_de_cc">Numero de cc:</string>
+    <string name="detalhes_dos_sintomas">Detalhes dos sintomas:</string>
+    <string name="sintomas">Sintomas:</string>
+    <string name="contacto_de_emerg_ncia">Contacto de emergência:</string>
+    <string name="data_de_nascimento">Data de nascimento:</string>
+    <string name="g_nero">Género:</string>
+    <string name="idade">Idade:</string>
+    <string name="nome">Nome:</string>
+    <string name="dados_do_paciente">Dados do Paciente</string>
+    <string name="fun_o_a_exercer">Função a exercer:</string>
+    <string name="tratamento">Tratamento:</string>
+    <string name="medica_o">Medicação:</string>
 </resources>
