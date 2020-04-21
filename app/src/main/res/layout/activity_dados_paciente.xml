@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -155,6 +158,25 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/data_de_entrada_no_servi_o_hospitalar"/>
+
+        <TextView
+            android:id="@+id/textViewDataEntrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp"
+            android:text="" />
+
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
@@ -199,6 +221,21 @@
     <TextView
         android:layout_marginTop="8dp"
         android:id="@+id/textViewSintomaDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/estado_clinico"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/textViewEstadoClinico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -261,6 +298,8 @@
         android:textSize="16sp"
         android:text="" />
 
+
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -288,6 +327,25 @@
         android:layout_marginTop="8dp"
         android:background="#00008B" />
 
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Data de inicio do tratamento"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <EditText
+
+        android:id="@+id/data_inicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="date"
+        android:text="" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -296,18 +354,62 @@
         android:textColor="#000000"
         android:textSize="16sp" />
 
+        <EditText
+            android:id="@+id/medicamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:text="" />
+
+    <Button
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:text="Adicionar"
+        android:onClick="adicionaMedicamento"
+    android:id="@+id/button_add_Data"/>
+
+
     <ListView
         android:id="@+id/ListaMedicamento"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:divider="#f00"
         android:dividerHeight="1dp" />
-    <TextView
-        android:id="@+id/textViewLista"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="#000000" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/regime_alimentar"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <EditText
+
+        android:id="@+id/regime_alimentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/outros_procedimentos"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <EditText
+
+        android:id="@+id/outros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:inputType="text"
+        android:text="" />
 
 </LinearLayout>
+</ScrollView>

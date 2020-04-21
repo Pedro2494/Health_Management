@@ -28,4 +28,13 @@
     <string name="fun_o_a_exercer">Função a exercer:</string>
     <string name="tratamento">Tratamento:</string>
     <string name="medica_o">Medicação:</string>
+    <string name="regime_alimentar">Regime alimentar:</string>
+    <string name="outros_procedimentos">Outros procedimentos</string>
+    <string name="data_de_entrada_no_servi_o_hospitalar">Data de entrada no serviço hospitalar:</string>
+    <string name="spinner_title" />
+    <string name="estado_clinico">Estado clinico:</string>
+    <string name="Pouco_urgente">Pouco urgente</string>
+    <string name="urgente">Urgente</string>
+    <string name="Muito_urgente">Muito Urgente</string>
+    <string name="emergente">Emergente</string>
 </resources>

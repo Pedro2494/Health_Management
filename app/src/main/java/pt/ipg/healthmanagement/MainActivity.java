@@ -6,24 +6,61 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    //decalarar checkbox do genero
     CheckBox genM, genF;
+    //declarar spiner
+    Spinner spinner_d;
+    String estados[] = {"Pouco urgente", "Urgente", "Muito Urgente", "Emergente"};
+    ArrayAdapter<String> arrayAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        genM = (CheckBox) findViewById(R.id.masculino);
-        genF =(CheckBox) findViewById(R.id.feminino);
-    }
+        //spiner estado clinico
+        spinner_d = (Spinner) findViewById(R.id.spinner);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, estados);
+        spinner_d.setAdapter(arrayAdapter);
 
+           spinner_d.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    String selected = parent.getItemAtPosition(position).toString();
+                    //Toast.makeText(parent.getContext(), "Selected: " + estados, Toast.LENGTH_LONG).show();
+
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+
+        //declarar checkbox do genero
+        genM = (CheckBox) findViewById(R.id.masculino);
+        genF = (CheckBox) findViewById(R.id.feminino);
+
+
+        //TAMBEM E DO SPINNER
+
+
+    }
 
     public void submeter(View view) {
         Intent intent = new Intent(this, Dados_paciente.class);
@@ -57,9 +94,13 @@ public class MainActivity extends AppCompatActivity {
         String descricao_Sintoma = SintomaDescricao.getText().toString();
         intent.putExtra("descricao_Sintoma", descricao_Sintoma);
 
-        EditText Morada =(EditText)findViewById(R.id.morada);
-        String morada_P= Morada.getText().toString();
-        intent.putExtra("morada_P",morada_P);
+        EditText Morada = (EditText) findViewById(R.id.morada);
+        String morada_P = Morada.getText().toString();
+        intent.putExtra("morada_P", morada_P);
+
+        EditText DataEntrada = (EditText) findViewById(R.id.data_entrada);
+        String dataEntrada = DataEntrada.getText().toString();
+        intent.putExtra("dataEntrada", dataEntrada);
 
         //validar dados
 
@@ -110,21 +151,27 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if(morada_P.length() <=0){
+        if (morada_P.length() <= 0) {
             Morada.setError("Campo obrigatório");
             Morada.requestFocus();
             return;
         }
 
+        if (dataEntrada.length() <= 0) {
+            DataEntrada.setError("Campo obrigatório");
+            DataEntrada.requestFocus();
+            return;
+        }
+        //checkbox genero
         intent.putExtra("Masculino", genM.isChecked());
         intent.putExtra("Feminino", genF.isChecked());
 
 
+        //spiner estado clinico
+        intent.putExtra("data", String.valueOf(spinner_d.getSelectedItem()));
+
         startActivity(intent);
     }
-
-
-
 }
 
 
