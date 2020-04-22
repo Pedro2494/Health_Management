@@ -229,13 +229,13 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:prompt="@string/spinner_title"
-            />
+            android:textAlignment="center" />
 
         <Button
             android:id="@+id/Submeter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/button1_background"
             android:onClick="submeter"

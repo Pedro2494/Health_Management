@@ -2,414 +2,421 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Dados_paciente"
-    android:layout_margin="8dp">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/dados_do_paciente"
-    android:textAlignment="center"
-    android:textSize="20sp"/>
 
-    <View
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
-<LinearLayout
-    android:layout_marginTop="8dp"
-    android:layout_width="match_parent"
-    android:layout_height="24dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/nome"/>
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        tools:context=".Dados_paciente">
 
-    <TextView
-        android:id="@+id/textViewNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:textSize="16sp"
-        android:text="" />
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dados_do_paciente"
+            android:textAlignment="center"
+            android:textSize="20sp" />
 
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="24dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nome"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/idade"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewIdade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g_nero"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewSexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_de_nascimento"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewDataNas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contacto_de_emerg_ncia"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/morada"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewMorada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/numero_de_cc"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewcartao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_de_entrada_no_servi_o_hospitalar"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewDataEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text=""
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sintomas"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/idade"/>
+            android:layout_marginTop="8dp"
+            android:text="@string/sintomas"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewIdade"
+            android:id="@+id/textViewSintoma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="" />
-    </LinearLayout>
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="16sp" />
 
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="24dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/g_nero"/>
+            android:layout_marginTop="8dp"
+            android:text="@string/detalhes_dos_sintomas"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewSexo"
+            android:id="@+id/textViewSintomaDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="" />
-    </LinearLayout>
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="16sp" />
 
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="24dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/data_de_nascimento"/>
+            android:layout_marginTop="15dp"
+            android:text="@string/estado_clinico"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewDataNas"
+            android:id="@+id/textViewEstadoClinico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="" />
-    </LinearLayout>
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="16sp" />
 
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="24dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/contacto_de_emerg_ncia"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
 
         <TextView
-            android:id="@+id/textViewContacto"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="" />
-    </LinearLayout>
+            android:gravity="center"
+            android:text="@string/profissional_de_saude_responsav_l"
+            android:textColor="#191970"
+            android:textSize="20sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/morada"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textViewMorada"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text=""/>
+            android:gravity="center"
+            android:text="@string/campos_a_preencher"
+            android:textSize="12sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="24dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/numero_de_cc"/>
+            android:layout_marginTop="15dp"
+            android:text="@string/nome"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewcartao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="" />
+        <Spinner
+            android:id="@+id/NomePro"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_marginTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="24dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="@string/data_de_entrada_no_servi_o_hospitalar"/>
+            android:layout_marginTop="15dp"
+            android:text="@string/fun_o_a_exercer"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewDataEntrada"
+            android:id="@+id/textViewFuncaoPro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sintomas"
-        android:textAlignment="center"
-        android:textSize="20sp"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/sintomas"/>
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:id="@+id/textViewSintoma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="@string/detalhes_dos_sintomas"/>
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:id="@+id/textViewSintomaDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/estado_clinico"
-        android:textSize="16sp" />
-
-    <TextView
-        android:layout_marginTop="8dp"
-        android:id="@+id/textViewEstadoClinico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/profissional_de_saude_responsav_l"
-        android:gravity="center"
-        android:textColor="#191970"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/campos_a_preencher"
-        android:textSize="12sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/nome"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <Spinner
-        android:id="@+id/NomePro"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"/>
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="16sp" />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/fun_o_a_exercer"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
 
-    <TextView
-        android:layout_marginTop="8dp"
-        android:id="@+id/textViewFuncaoPro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tratamento"
+            android:textColor="#191970"
+            android:textSize="20sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/campos_a_preencher"
+            android:textSize="12sp" />
 
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/tratamento"
-        android:gravity="center"
-        android:textColor="#191970"
-        android:textSize="20sp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/campos_a_preencher"
-        android:textSize="12sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#00008B" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#00008B" />
 
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Data de inicio do tratamento"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <EditText
-
-        android:id="@+id/data_inicio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:inputType="date"
-        android:text="" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/medica_o"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Data de inicio do tratamento"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/medicamento"
+
+            android:id="@+id/data_inicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="date"
+            android:text="" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/observa_es"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+
+            android:id="@+id/outros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:inputType="text"
             android:text="" />
 
-    <Button
-    android:layout_width="100dp"
-    android:layout_height="wrap_content"
-    android:text="Adicionar"
-        android:onClick="adicionaMedicamento"
-    android:id="@+id/button_add_Data"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/regime_alimentar"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
+
+            android:id="@+id/regime_alimentar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="text"
+            android:text="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/medica_o"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
 
-    <ListView
-        android:id="@+id/ListaMedicamento"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="#f00"
-        android:dividerHeight="1dp" />
+               <EditText
+                   android:id="@+id/txtinput"
+                   android:layout_width="200dp"
+                   android:layout_height="wrap_content"
+                   android:text=""/>
+                <Button
+                    android:id="@+id/btadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adicionar"
+                    android:layout_toRightOf="@+id/txtinput"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/regime_alimentar"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+               <ListView
+                   android:id="@+id/listv"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+               </ListView>
 
-    <EditText
-
-        android:id="@+id/regime_alimentar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:inputType="text"
-        android:text="" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="@string/outros_procedimentos"
-        android:textColor="#000000"
-        android:textSize="16sp" />
-
-    <EditText
-
-        android:id="@+id/outros"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:inputType="text"
-        android:text="" />
-
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>

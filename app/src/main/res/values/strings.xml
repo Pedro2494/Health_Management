@@ -37,4 +37,6 @@
     <string name="urgente">Urgente</string>
     <string name="Muito_urgente">Muito Urgente</string>
     <string name="emergente">Emergente</string>
+    <string name="adicionar">Adicionar</string>
+    <string name="observa_es">Observações:</string>
 </resources>
