@@ -6,15 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 public class Dados_paciente extends AppCompatActivity {
@@ -22,9 +25,11 @@ public class Dados_paciente extends AppCompatActivity {
         TextView textView;
 
     //lista medicamentos
-    private ArrayList<String> arrayList;
-    private ArrayAdapter<String> adapter;
-    private EditText txtInput;
+        ArrayList<String> itemList;
+        ArrayAdapter<String> adapter;
+        EditText itemText;
+        Button addButton;
+        ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +37,23 @@ public class Dados_paciente extends AppCompatActivity {
         setContentView(R.layout.activity_dados_paciente);
 
         //lista medicamentos
-        ListView listView =(ListView)findViewById(R.id.listv);
-        String[] items={""};
-        arrayList = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<String>(this,R.layout.list_item,R.id.txtitem,arrayList);
-        listView.setAdapter(adapter);
-        txtInput =(EditText)findViewById(R.id.txtinput);
-        Button btAdd=(Button)findViewById(R.id.btadd);
-        btAdd.setOnClickListener(new View.OnClickListener() {
+        lv = (ListView) findViewById(R.id.listView);
+        itemText = (EditText)findViewById(R.id.addtext);
+        addButton = (Button)findViewById(R.id.addbutton);
+        itemList = new ArrayList<>();
+        adapter = new ArrayAdapter<String>(Dados_paciente.this, android.R.layout.simple_list_item_1,itemList);
+
+        View.OnClickListener addListner = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String newItem = txtInput.getText().toString();
-                arrayList.add(newItem);
+                itemList.add(itemText.getText().toString());
+                itemText.setText("");
                 adapter.notifyDataSetChanged();
+
             }
-        });
+        };
+            addButton.setOnClickListener(addListner);
+            lv.setAdapter(adapter);
 
 
 
@@ -116,6 +123,7 @@ public class Dados_paciente extends AppCompatActivity {
 
 
     }
+    // adiciona medicamento
 
 }
 
