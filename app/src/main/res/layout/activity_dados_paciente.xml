@@ -13,15 +13,14 @@
         android:layout_height="match_parent"
         android:layout_margin="8dp"
         android:orientation="vertical"
-        tools:context=".Dados_paciente"
-        >
+        tools:context=".Dados_paciente">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/dados_do_paciente"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dados_do_paciente"
+        android:textAlignment="center"
+        android:textSize="20sp" />
 
         <View
             android:layout_width="match_parent"
