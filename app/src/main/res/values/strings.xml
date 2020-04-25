@@ -39,4 +39,8 @@
     <string name="emergente">Emergente</string>
     <string name="adicionar">Adicionar</string>
     <string name="observa_es">Observações:</string>
+    <string name="ficha_do_paciente">Ficha do paciente</string>
+    <string name="contacto">Contacto:</string>
+    <string name="data_de_inicio_do_tratamento">Data de inicio do tratamento:</string>
+    <string name="data_de_entrada_no_hospital">Data de entrada no hospital:</string>
 </resources>

@@ -159,7 +159,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/data_de_entrada_no_servi_o_hospitalar"
+                android:text="@string/data_de_entrada_no_hospital"
                 android:textSize="16sp" />
 
             <TextView
@@ -293,6 +293,22 @@
             android:text=""
             android:textSize="16sp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/contacto"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewContactoMedico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textSize="16sp" />
+
 
         <View
             android:layout_width="match_parent"
@@ -326,7 +342,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Data de inicio do tratamento"
+            android:text="@string/data_de_inicio_do_tratamento"
             android:textColor="#000000"
             android:textSize="16sp" />
 
@@ -414,6 +430,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/button1_background"
             android:padding="24dp"
+            android:onClick="Enviar"
             android:text="@string/submeter"
             android:textColor="#191970"
             android:textSize="16sp"/>

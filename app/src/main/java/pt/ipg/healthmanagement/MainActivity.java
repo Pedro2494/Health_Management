@@ -68,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submeter(View view) {
+        //intent para activity_dados_paciente
         Intent intent = new Intent(this, Dados_paciente.class);
+
+
 
         EditText Nome = (EditText) findViewById(R.id.nome_paciente);
         String nome_Paciente = Nome.getText().toString();
@@ -166,6 +169,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("data", String.valueOf(spinner_d.getSelectedItem()));
 
         startActivity(intent);
+         //lancar  para activity_dados_paciente
+
+
     }
 }
 

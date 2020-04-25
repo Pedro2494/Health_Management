@@ -2,6 +2,7 @@ package pt.ipg.healthmanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -35,6 +38,8 @@ public class Dados_paciente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dados_paciente);
+
+
 
         //lista medicamentos
         lv = (ListView) findViewById(R.id.listView);
@@ -107,8 +112,78 @@ public class Dados_paciente extends AppCompatActivity {
 
 
 
+
+
     }
-    // adiciona medicamento
+
+    public void Enviar(View view) {
+        Intent intent2 = new Intent(this, Ficha_Paciente.class);
+
+        //passar dados para ficha
+
+        TextView NomePaciente =(TextView)findViewById(R.id.textViewNome);
+        String nomepaciente = NomePaciente.getText().toString();
+        intent2.putExtra("nomepaciente",nomepaciente);
+
+        TextView Genero = (TextView)findViewById(R.id.textViewSexo);
+        String genero = Genero.getText().toString();
+        intent2.putExtra("genero", genero);
+
+        TextView DataDeNascimento = (TextView)findViewById(R.id.textViewDataNas);
+        String datanascimento = DataDeNascimento.getText().toString();
+        intent2.putExtra("datanascimento", datanascimento);
+
+        TextView ContactoDeEmergencia = (TextView)findViewById(R.id.textViewContacto);
+        String contactodeemergencia = ContactoDeEmergencia.getText().toString();
+        intent2.putExtra("contactodeemergencia", contactodeemergencia);
+
+        TextView Morada =(TextView)findViewById(R.id.textViewMorada);
+        String morada = Morada.getText().toString();
+        intent2.putExtra("morada", morada);
+
+        TextView CartaoCC =(TextView)findViewById(R.id.textViewcartao);
+        String cartao = CartaoCC.getText().toString();
+        intent2.putExtra("cartao", cartao);
+
+        TextView DataEntrada = (TextView)findViewById(R.id.textViewDataEntrada);
+        String dataentrada = DataEntrada.getText().toString();
+        intent2.putExtra("dataentrada", dataentrada);
+
+        //passar sintomas
+
+        TextView Sintoma =(TextView)findViewById(R.id.textViewSintoma);
+        String sintoma = Sintoma.getText().toString();
+        intent2.putExtra("sintoma", sintoma);
+
+        TextView SintomaDesc = (TextView)findViewById(R.id.textViewSintomaDesc);
+        String sintomadesc = SintomaDesc.getText().toString();
+        intent2.putExtra("sintomadesc", sintomadesc);
+
+        TextView EstadoClinico = (TextView)findViewById(R.id.textViewEstadoClinico);
+        String estadoclinico = EstadoClinico.getText().toString();
+        intent2.putExtra("estadoclinico", estadoclinico);
+
+
+        //passar tratamento para ficha
+        EditText DataInicioTratamento = (EditText) findViewById(R.id.data_inicio);
+        String data_inicio_tratamento = DataInicioTratamento.getText().toString();
+        intent2.putExtra("data_inicio_tratamento", data_inicio_tratamento);
+
+        EditText Observacoes = (EditText)findViewById(R.id.outros);
+        String observacoes = Observacoes.getText().toString();
+        intent2.putExtra("observacoes", observacoes);
+
+        EditText RegimeAlimentar = (EditText)findViewById(R.id.regime_alimentar);
+        String regime_alimentar = RegimeAlimentar.getText().toString();
+        intent2.putExtra("regime_alimentar", regime_alimentar);
+
+
+
+
+
+        startActivity(intent2);
+    }
+
 
 }
 
