@@ -51,21 +51,7 @@
             android:inputType="textPersonName"
             android:text="" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/idade"
-            android:textColor="#000000"
-            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/idade_paciente"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="numberSigned"
-            android:text="" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,28 +61,26 @@
             android:textColor="#000000"
             android:textSize="16sp" />
 
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="8dp">
+        <RadioGroup
+            android:id="@+id/grupo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/masculino"
-                android:layout_width="110dp"
-                android:layout_height="25dp"
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/masculino"
-                android:textColor="#000000"
-                android:textSize="16sp" />
+                android:id="@+id/radio_masculino" />
 
-            <CheckBox
-                android:id="@+id/feminino"
-                android:layout_width="105dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="40dp"
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/feminino"
-                android:textColor="#000000"
-                android:textSize="16sp" />
-        </LinearLayout>
+                android:id="@+id/radio_feminino"
+                android:layout_marginStart="64dp"/>
+
+        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"

@@ -11,6 +11,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -19,8 +21,9 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
-    //decalarar checkbox do genero
-    CheckBox genM, genF;
+    //decalarar radiobutton do genero
+    RadioButton Rmasc;
+    RadioButton Rfem;
     //declarar spiner
     Spinner spinner_d;
     String estados[] = {"Pouco urgente", "Urgente", "Muito Urgente", "Emergente"};
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //radiobutton
 
         //spiner estado clinico
         spinner_d = (Spinner) findViewById(R.id.spinner);
@@ -52,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
-        //declarar checkbox do genero
-        genM = (CheckBox) findViewById(R.id.masculino);
-        genF = (CheckBox) findViewById(R.id.feminino);
+        //declarar radiobutton do genero
 
 
-        //TAMBEM E DO SPINNER
+
+
+
 
 
     }
@@ -69,9 +74,6 @@ public class MainActivity extends AppCompatActivity {
         String nome_Paciente = Nome.getText().toString();
         intent.putExtra("nome_Paciente", nome_Paciente);
 
-        EditText Idade = (EditText) findViewById(R.id.idade_paciente);
-        String idade_Paciente = Idade.getText().toString();
-        intent.putExtra("idade_Paciente", idade_Paciente);
 
 
         EditText DataNascimento = (EditText) findViewById(R.id.data_nascimento);
@@ -104,37 +106,29 @@ public class MainActivity extends AppCompatActivity {
 
         //validar dados
 
+
         if (nome_Paciente.length() <= 0) {
-            Nome.setError("Campo obrigatório");
-            Nome.requestFocus();
-            return;
-        }
-        if (nome_Paciente.length() <= 0) {
-            Nome.setError("Campo obrigatório");
+            Nome.setError("Nome obrigatório");
             Nome.requestFocus();
             return;
         }
 
-        if (idade_Paciente.length() <= 0) {
-            Idade.setError("Campo obrigatório");
-            Idade.requestFocus();
-            return;
-        }
+
 
         if (data_de_nascimento.length() <= 0) {
-            DataNascimento.setError("Campo obrigatório");
+            DataNascimento.setError("Data de nascimento obrigatório");
             DataNascimento.requestFocus();
             return;
         }
 
         if (contacto_de_emergencia.length() <= 0) {
-            ContactoEmergencia.setError("Campo obrigatório");
+            ContactoEmergencia.setError("Contacto obrigatório");
             ContactoEmergencia.requestFocus();
             return;
         }
 
         if (numero_CC.length() <= 0) {
-            NumeroCC.setError("Campo obrigatório");
+            NumeroCC.setError("Número de CC obrigatório");
             NumeroCC.requestFocus();
             return;
         }
@@ -152,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (morada_P.length() <= 0) {
-            Morada.setError("Campo obrigatório");
+            Morada.setError("Morada obrigatório");
             Morada.requestFocus();
             return;
         }
@@ -162,9 +156,10 @@ public class MainActivity extends AppCompatActivity {
             DataEntrada.requestFocus();
             return;
         }
-        //checkbox genero
-        intent.putExtra("Masculino", genM.isChecked());
-        intent.putExtra("Feminino", genF.isChecked());
+        //radiobutton genero
+        RadioGroup rg = (RadioGroup) findViewById(R.id.grupo1);
+        String selectedRadioValue = ((RadioButton)findViewById(rg.getCheckedRadioButtonId() )).getText().toString();
+        intent.putExtra("rg", selectedRadioValue);
 
 
         //spiner estado clinico

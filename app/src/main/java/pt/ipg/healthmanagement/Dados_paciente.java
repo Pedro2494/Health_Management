@@ -64,11 +64,6 @@ public class Dados_paciente extends AppCompatActivity {
         TextView Nome = (TextView) findViewById(R.id.textViewNome);
         Nome.setText(nome);
 
-
-        String idade = intent.getStringExtra("idade_Paciente");
-        TextView Idade = (TextView) findViewById(R.id.textViewIdade);
-        Idade.setText(idade);
-
         String datanascimento = intent.getStringExtra("data_de_nascimento");
         TextView DataNascimento = (TextView) findViewById(R.id.textViewDataNas);
         DataNascimento.setText(datanascimento);
@@ -97,21 +92,11 @@ public class Dados_paciente extends AppCompatActivity {
         TextView DataEntrada = (TextView)findViewById(R.id.textViewDataEntrada);
         DataEntrada.setText(dataentrada);
 
-        //checkbox
-        textView = (TextView) findViewById(R.id.textViewSexo);
 
-        StringBuilder str = new StringBuilder("");
-        if (intent.getBooleanExtra("Masculino", false)){
-            str.append("Masculino");
-        }
-
-        if (intent.getBooleanExtra("Feminino", false)){
-            str.append("Feminino");
-        }
-        if(str.length() == 0){
-            str.append("Plain");
-        }
-        textView.setText(str);
+        //Radiobutton genero
+        String selectedRadioValue = intent.getStringExtra("rg");
+        TextView genero = (TextView)findViewById(R.id.textViewSexo);
+        genero.setText(selectedRadioValue);
 
         //spiner estadoClinico
         TextView estado=(TextView)findViewById(R.id.textViewEstadoClinico);
