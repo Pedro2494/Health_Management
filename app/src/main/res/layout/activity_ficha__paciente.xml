@@ -273,7 +273,7 @@
         android:id="@+id/textViewNomeMedicoFicha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:layout_marginStart="8dp"
         android:text=""
         android:textSize="16sp" />
@@ -294,7 +294,7 @@
         android:id="@+id/textViewFuncaoMedico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text=""
         android:textSize="16sp" />
     </LinearLayout>
@@ -314,7 +314,7 @@
         android:id="@+id/textViewContactoMedicoFicha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text=""
         android:textSize="16sp" />
     </LinearLayout>
@@ -342,7 +342,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text="@string/data_de_inicio_do_tratamento"
         android:textSize="16sp" />
 
@@ -350,14 +350,14 @@
         android:id="@+id/textViewDataInicioTratamentoFicha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text=""
         android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text="@string/observa_es"
         android:textSize="16sp" />
 
@@ -365,14 +365,14 @@
         android:id="@+id/textViewObservacoesFicha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text=""
         android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text="@string/regime_alimentar"
         android:textSize="16sp" />
 
@@ -380,14 +380,14 @@
         android:id="@+id/textViewRegimeAlimentarFicha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text=""
         android:textSize="16sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text="@string/medica_o"
         android:textSize="16sp" />
 
@@ -395,7 +395,7 @@
         android:id="@+id/textViewMedicacaoFicha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+
         android:text=""
         android:textSize="16sp" />
 

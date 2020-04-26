@@ -71,6 +71,12 @@ public class Ficha_Paciente extends AppCompatActivity {
         regimealimentar.setText(RegimeAlimentar);
 
 
+    //adicionar medicamentos
 
+        TextView textView = (TextView)findViewById(R.id.textViewMedicacaoFicha);
+        Bundle bundle2=getIntent().getExtras();
+        String data = bundle2.get("itemList").toString();
+       // String ndata = data.replace("[","");
+        textView.setText(data.substring(1, data.length()-1));
     }
 }

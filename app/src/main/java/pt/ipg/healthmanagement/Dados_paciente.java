@@ -41,7 +41,7 @@ public class Dados_paciente extends AppCompatActivity {
 
 
 
-        //lista medicamentos
+        //criar lista medicamentos
         lv = (ListView) findViewById(R.id.listView);
         itemText = (EditText)findViewById(R.id.addtext);
         addButton = (Button)findViewById(R.id.addbutton);
@@ -55,6 +55,11 @@ public class Dados_paciente extends AppCompatActivity {
                 itemText.setText("");
                 adapter.notifyDataSetChanged();
 
+
+
+
+
+
             }
         };
             addButton.setOnClickListener(addListner);
@@ -62,7 +67,8 @@ public class Dados_paciente extends AppCompatActivity {
 
 
 
-        //dados pessoais do paciente
+
+        //passar dados pessoais do paciente
         Intent intent = getIntent();
 
         String nome = intent.getStringExtra("nome_Paciente");
@@ -98,19 +104,16 @@ public class Dados_paciente extends AppCompatActivity {
         DataEntrada.setText(dataentrada);
 
 
-        //Radiobutton genero
+        //passar valor do Radiobutton genero
         String selectedRadioValue = intent.getStringExtra("rg");
         TextView genero = (TextView)findViewById(R.id.textViewSexo);
         genero.setText(selectedRadioValue);
 
-        //spiner estadoClinico
+        //passar valor so spiner estadoClinico
         TextView estado=(TextView)findViewById(R.id.textViewEstadoClinico);
         Bundle bundle=getIntent().getExtras();
         String data=bundle.get("data").toString();
         estado.setText(data);
-
-
-
 
 
 
@@ -177,8 +180,11 @@ public class Dados_paciente extends AppCompatActivity {
         String regime_alimentar = RegimeAlimentar.getText().toString();
         intent2.putExtra("regime_alimentar", regime_alimentar);
 
+    //lista de medicamentos
 
+        //passar para outra activity os medicamentos
 
+        intent2.putExtra("itemList", itemList);
 
 
         startActivity(intent2);
