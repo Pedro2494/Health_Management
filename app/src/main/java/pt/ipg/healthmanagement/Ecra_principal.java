@@ -1,9 +1,13 @@
 package pt.ipg.healthmanagement;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -17,9 +21,34 @@ public class Ecra_principal extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu, menu);
+
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+        if (id == R.id.addMedico){
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     public void abrir(View view) {
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void abrirlista(View view) {
+        Intent intent2 = new Intent(this, lista_Pacientes.class);
+        startActivity(intent2);
     }
 }
