@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
     <item
         android:id="@+id/addMedico"
-        android:title="Registar médico"
+        android:title="Registar médicos"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/verMedicos"
+        android:title="Ver médicos "
+        app:showAsAction="never">
+    </item>
+
     <item
         android:id="@+id/Ajuda"
         android:title="Ajuda"
-        app:showAsAction="never">
-    </item>
+        app:showAsAction="never" />
+
     <item
-        android:id="@+id/Sair"
+        android:id="@+id/sair"
         android:title="Sair"
         app:showAsAction="never" />
 </menu>

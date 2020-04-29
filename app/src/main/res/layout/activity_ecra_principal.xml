@@ -12,7 +12,7 @@
 
     <ImageView
         android:layout_gravity="center"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/logo"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -22,7 +22,8 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_marginTop="16dp">
 
     <LinearLayout
         android:id="@+id/botaoCriar"

@@ -21,6 +21,7 @@ public class Ecra_principal extends AppCompatActivity {
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -32,11 +33,22 @@ public class Ecra_principal extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        Intent AM = new Intent(this, regista_medico.class);
+        Intent VM = new Intent(this, lista_medicos.class);
 
         int id = item.getItemId();
         if (id == R.id.addMedico){
-
+            startActivity(AM);
         }
+
+        if (id == R.id.verMedicos){
+            startActivity(VM);
+        }
+
+        if (id == R.id.sair){
+            finish();
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

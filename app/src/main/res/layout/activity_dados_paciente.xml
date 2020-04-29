@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/dados_do_paciente"
+            android:textColor="#000000"
         android:textAlignment="center"
         android:textSize="20sp" />
 
@@ -26,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -176,12 +177,13 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sintomas"
+            android:textColor="#000000"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -189,7 +191,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -240,14 +242,14 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/profissional_de_saude_responsav_l"
-            android:textColor="#191970"
+            android:textColor="#0A3D6E"
             android:textSize="20sp" />
 
         <TextView
@@ -261,7 +263,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -314,14 +316,14 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/tratamento"
-            android:textColor="#191970"
+            android:textColor="#0A3D6E"
             android:textSize="20sp" />
 
         <TextView
@@ -335,7 +337,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="8dp"
-            android:background="#00008B" />
+            android:background="#0A3D6E" />
 
 
         <TextView
@@ -414,7 +416,7 @@
                 android:onClick="addItems"
                 android:background="@drawable/button1_background"
                 android:layout_gravity="center"
-                android:textColor="#191970"
+                android:textColor="#0A3D6E"
                 android:textSize="16sp"/>
 
         <ListView
@@ -432,7 +434,7 @@
             android:padding="24dp"
             android:onClick="Enviar"
             android:text="@string/submeter"
-            android:textColor="#191970"
+            android:textColor="#0A3D6E"
             android:textSize="16sp"/>
 
     </LinearLayout>
