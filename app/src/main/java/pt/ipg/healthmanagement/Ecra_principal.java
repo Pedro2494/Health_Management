@@ -37,15 +37,15 @@ public class Ecra_principal extends AppCompatActivity {
         Intent VM = new Intent(this, lista_medicos.class);
 
         int id = item.getItemId();
-        if (id == R.id.addMedico){
+        if (id == R.id.addMedico) {
             startActivity(AM);
         }
 
-        if (id == R.id.verMedicos){
+        if (id == R.id.verMedicos) {
             startActivity(VM);
         }
 
-        if (id == R.id.sair){
+        if (id == R.id.sair) {
             finish();
         }
 

@@ -35,31 +35,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //radiobutton
 
         //spiner estado clinico
         spinner_d = (Spinner) findViewById(R.id.spinner);
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, estados);
         spinner_d.setAdapter(arrayAdapter);
 
-           spinner_d.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    String selected = parent.getItemAtPosition(position).toString();
-                    //Toast.makeText(parent.getContext(), "Selected: " + estados, Toast.LENGTH_LONG).show();
-
-                }
-
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {
-
-                }
-            });
+        spinner_d.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selected = parent.getItemAtPosition(position).toString();
 
 
-        //declarar radiobutton do genero
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
 
 
 
@@ -72,11 +66,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Dados_paciente.class);
 
 
-
         EditText Nome = (EditText) findViewById(R.id.nome_paciente);
         String nome_Paciente = Nome.getText().toString();
         intent.putExtra("nome_Paciente", nome_Paciente);
-
 
 
         EditText DataNascimento = (EditText) findViewById(R.id.data_nascimento);
@@ -115,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
             Nome.requestFocus();
             return;
         }
-
 
 
         if (data_de_nascimento.length() <= 0) {
@@ -161,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         }
         //radiobutton genero
         RadioGroup rg = (RadioGroup) findViewById(R.id.grupo1);
-        String selectedRadioValue = ((RadioButton)findViewById(rg.getCheckedRadioButtonId() )).getText().toString();
+        String selectedRadioValue = ((RadioButton) findViewById(rg.getCheckedRadioButtonId())).getText().toString();
         intent.putExtra("rg", selectedRadioValue);
 
 
@@ -169,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("data", String.valueOf(spinner_d.getSelectedItem()));
 
         startActivity(intent);
-         //lancar  para activity_dados_paciente
+        //lancar  para activity_dados_paciente
 
 
     }

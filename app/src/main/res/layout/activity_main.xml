@@ -52,7 +52,6 @@
             android:text="" />
 
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,17 +67,17 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/radio_masculino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/masculino"
-                android:id="@+id/radio_masculino" />
+                android:text="@string/masculino" />
 
             <RadioButton
+                android:id="@+id/radio_feminino"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/feminino"
-                android:id="@+id/radio_feminino"
-                android:layout_marginStart="64dp"/>
+                android:layout_marginStart="64dp"
+                android:text="@string/feminino" />
 
         </RadioGroup>
 
