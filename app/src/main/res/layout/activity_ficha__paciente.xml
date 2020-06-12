@@ -403,5 +403,18 @@
             android:text=""
             android:textSize="16sp" />
 
+        <Button
+            android:id="@+id/AdicionaDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button1_background"
+            android:onClick="AdicionaDados"
+            android:padding="24dp"
+            android:text="@string/registar"
+            android:textColor="#0A3D6E"
+            android:textSize="16sp" />
+
     </LinearLayout>
 </ScrollView>

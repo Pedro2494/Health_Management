@@ -3,20 +3,45 @@ package pt.ipg.healthmanagement;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
 import android.os.Bundle;
+
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+
 
 import org.w3c.dom.Text;
 
 public class Ficha_Paciente extends AppCompatActivity {
+    //base de dados
+    TextView nomeR, generoR, datanasR, contactoemR, moradaR, numeroccR, datahospitalR;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ficha__paciente);
 
-        Intent intent2 = getIntent();
+        //base de dados
+        db=new DatabaseHelper(this);
+        //getting id
+        nomeR=findViewById(R.id.textViewNomeFicha);
+        generoR=findViewById(R.id.textViewSexoFicha);
+        datanasR=findViewById(R.id.textViewDataNasFicha);
+        contactoemR=findViewById(R.id.textViewContactoFicha);
+        moradaR=findViewById(R.id.textViewMoradaFicha);
+        numeroccR=findViewById(R.id.textViewcartaoFicha);
+        datahospitalR=findViewById(R.id.textViewDataEntradaFicha);
+
+
+
+
+
         //colocar dados dos pacientes
+        Intent intent2 = getIntent();
+
         String nome = intent2.getStringExtra("nomepaciente");
         TextView Nome = (TextView) findViewById(R.id.textViewNomeFicha);
         Nome.setText(nome);
@@ -78,5 +103,22 @@ public class Ficha_Paciente extends AppCompatActivity {
         String data = bundle2.get("itemList").toString();
 
         textView.setText(data.substring(1, data.length() - 1));
+
     }
+
+    public void AdicionaDados(View view) {
+        String saveNome=nomeR.getText().toString();
+        String saveGenero=generoR.getText().toString();
+        String saveDataNascimento=datanasR.getText().toString();
+        String saveContactoEmergencia=contactoemR.getText().toString();
+        String saveMorada=moradaR.getText().toString();
+        String saveNumeroCC=numeroccR.getText().toString();
+        String saveDataEntradaHospital=datahospitalR.getText().toString();
+        db.insertData(saveNome,saveGenero,saveDataNascimento,saveContactoEmergencia,saveMorada,saveNumeroCC,saveDataEntradaHospital);
+        Intent intent=new Intent(Ficha_Paciente.this,lista_Pacientes.class);
+        startActivity(intent);
+    }
+
+    //base de dados
+
 }
