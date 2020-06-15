@@ -30,7 +30,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-public long insertData(String nomeR, String generoR, String datanasR, String contactoemR, String moradaR, String numeroccR, String datahospitalR, String sintomaR, String detalheSintomaR, String estadoClinicoR){
+public long insertData(String nomeR, String generoR, String datanasR, String contactoemR, String moradaR, String numeroccR, String datahospitalR, String sintomaR,
+                       String detalheSintomaR, String estadoClinicoR, String datatratamentoR, String observacoesR, String regimealimentarR, String medicacaoR){
     SQLiteDatabase db=this.getWritableDatabase();
     ContentValues values=new ContentValues();
     values.put("Nome",nomeR);
@@ -40,9 +41,13 @@ public long insertData(String nomeR, String generoR, String datanasR, String con
     values.put("Morada",moradaR);
     values.put("Numero_cc",numeroccR);
     values.put("Data_entrada_servico",datahospitalR);
-    values.put("Sintoma",sintomaR);
+    values.put("Sintoma", sintomaR);
     values.put("Detalhe_sintoma", detalheSintomaR);
-    values.put("EstadoClinico", estadoClinicoR);
+    values.put("Estado_clinico", estadoClinicoR);
+    values.put("Data_inicio_tratamento", datatratamentoR);
+    values.put("Observacoes", observacoesR);
+    values.put("Regime_alimentar", regimealimentarR);
+    values.put("Medicacao", medicacaoR);
     long id=db.insert("Pacientes",null,values);
     db.close();
     return id;
@@ -67,6 +72,10 @@ public long insertData(String nomeR, String generoR, String datanasR, String con
                 note.setSintoma(cursor.getString(cursor.getColumnIndex("Sintoma")));
                 note.setDetalheSintoma(cursor.getString(cursor.getColumnIndex("Detalhe_sintoma")));
                 note.setEstadoClinico(cursor.getString(cursor.getColumnIndex("Estado_clinico")));
+                note.setData_inicio_tratamento(cursor.getString(cursor.getColumnIndex("Data_inicio_tratamento")));
+                note.setObservacoes(cursor.getString(cursor.getColumnIndex("Observacoes")));
+                note.setRegime_alimentar(cursor.getString(cursor.getColumnIndex("Regime_alimentar")));
+                note.setMedicacao(cursor.getString(cursor.getColumnIndex("Medicacao")));
                 notes.add(note);
             } while (cursor.moveToNext());
         }

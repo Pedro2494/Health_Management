@@ -44,6 +44,12 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
                 holder.sintomaRC.setText(note.getSintoma());
                 holder.detalheSintomaRC.setText(note.getDetalheSintoma());
                 holder.estadoclinicoRC.setText(note.getEstadoClinico());
+                holder.data_inicio_tartamentoRC.setText(note.getData_inicio_tratamento());
+                holder.observacoesRC.setText(note.getObservacoes());
+                holder.regime_alimentarRC.setText(note.getRegime_alimentar());
+                holder.medicacaoRC.setText(note.getMedicacao());
+
+
 
                 holder.nomeRC.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
@@ -76,6 +82,10 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
         public TextView sintomaRC;
         public TextView detalheSintomaRC;
         public TextView estadoclinicoRC;
+        public TextView data_inicio_tartamentoRC;
+        public TextView observacoesRC;
+        public TextView regime_alimentarRC;
+        public TextView medicacaoRC;
 
         public MyViewHolder(View view) {
             super(view);
@@ -90,6 +100,10 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
             sintomaRC = view.findViewById(R.id.sintomaitem);
             detalheSintomaRC = view.findViewById(R.id.detalhesintomaitem);
             estadoclinicoRC = view.findViewById(R.id.estadoclinicoitem);
+            data_inicio_tartamentoRC = view.findViewById(R.id.datainiciotratamentoitem);
+            observacoesRC = view.findViewById(R.id.observacoesitem);
+            regime_alimentarRC = view.findViewById(R.id.regimealimentaritem);
+            medicacaoRC = view.findViewById(R.id.medicacaoitem);
         }
     }
 

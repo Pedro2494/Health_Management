@@ -9,10 +9,19 @@ public class Data {
     String morada;
     String numero_cc;
     String data_entrada_servico;
-
     String sintoma;
     String detalheSintoma;
     String estadoClinico;
+    String data_inicio_tratamento;
+    String observacoes;
+    String regime_alimentar;
+    String medicacao;
+
+
+
+    public Data() {
+
+    }
 
     //Create table (query)
 
@@ -28,10 +37,14 @@ public class Data {
                     "Data_entrada_servico" + " TexT, " +
                     "Sintoma" + " TexT, " +
                     "Detalhe_sintoma" + " TexT, " +
-                    "Estado_clinico" + " TexT "+ ")";
+                    "Estado_clinico" + " TexT, " +
+                    "Data_inicio_tratamento" + " TexT, " +
+                    "Observacoes" + " TexT, " +
+                    "Regime_alimentar" + " TexT, " +
+                    "Medicacao" + " TexT "+ ")";
 
 
-    public Data(int id, String nome, String genero, String data_nascimento, String contacto_emergencia, String morada, String numero_cc, String data_entrada_servico, String sintoma, String detalheSintoma, String estadoClinico) {
+    public Data(int id, String nome, String genero, String data_nascimento, String contacto_emergencia, String morada, String numero_cc, String data_entrada_servico, String sintoma, String detalheSintoma, String estadoClinico, String data_inicio_tratamento, String observacoes, String regime_alimentar, String medicacao) {
         this.id = id;
         this.nome = nome;
         this.genero = genero;
@@ -43,10 +56,10 @@ public class Data {
         this.sintoma = sintoma;
         this.detalheSintoma = detalheSintoma;
         this.estadoClinico = estadoClinico;
-    }
-
-    public Data() {
-
+        this.data_inicio_tratamento = data_inicio_tratamento;
+        this.observacoes = observacoes;
+        this.regime_alimentar = regime_alimentar;
+        this.medicacao = medicacao;
     }
 
     public int getId() {
@@ -135,5 +148,37 @@ public class Data {
 
     public void setEstadoClinico(String estadoClinico) {
         this.estadoClinico = estadoClinico;
+    }
+
+    public String getData_inicio_tratamento() {
+        return data_inicio_tratamento;
+    }
+
+    public void setData_inicio_tratamento(String data_inicio_tratamento) {
+        this.data_inicio_tratamento = data_inicio_tratamento;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+    }
+
+    public String getRegime_alimentar() {
+        return regime_alimentar;
+    }
+
+    public void setRegime_alimentar(String regime_alimentar) {
+        this.regime_alimentar = regime_alimentar;
+    }
+
+    public String getMedicacao() {
+        return medicacao;
+    }
+
+    public void setMedicacao(String medicacao) {
+        this.medicacao = medicacao;
     }
 }

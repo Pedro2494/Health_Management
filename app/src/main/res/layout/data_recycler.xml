@@ -9,19 +9,27 @@
         android:layout_width="match_parent"
         android:layout_margin="5dp"
         android:padding="5dp"
+        android:orientation="horizontal"
         android:layout_height="wrap_content">
+
         <TextView
-        android:layout_width="wrap_content"
-        android:text="Id :  "
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:layout_height="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ficha_do_paciente"
+            android:textColor="#0A3D6E"
+            android:textSize="14sp" />
+
         <TextView
-            android:layout_width="match_parent"
+            android:layout_marginStart="14sp"
+            android:layout_width="wrap_content"
             android:id="@+id/id"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#0A3D6E" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_margin="5dp"
@@ -191,5 +199,78 @@
             android:id="@+id/estadoclinicoitem"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Data de inicio de tratamento:    "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/datainiciotratamentoitem"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Observações:    "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/observacoesitem"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Regime alimentar:    "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/regimealimentaritem"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Medicação:    "
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/medicacaoitem"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="#0A3D6E" />
 
 </LinearLayout>

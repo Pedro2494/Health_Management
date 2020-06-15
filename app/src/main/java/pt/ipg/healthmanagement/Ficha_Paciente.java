@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class Ficha_Paciente extends AppCompatActivity {
     //base de dados
     TextView nomeR, generoR, datanasR, contactoemR, moradaR, numeroccR, datahospitalR;
-    TextView sintomaR, detalheSintomaR, estadoClinicoR;
+    TextView sintomaR, detalheSintomaR, estadoClinicoR, datatratamentoR, observacoesR, regimealimentarR, medicacaoR;
     DatabaseHelper db;
 
     @Override
@@ -38,7 +38,10 @@ public class Ficha_Paciente extends AppCompatActivity {
         sintomaR=findViewById(R.id.textViewSintomaFicha);
         detalheSintomaR=findViewById(R.id.textViewSintomaDescFicha);
         estadoClinicoR=findViewById(R.id.textViewEstadoClinicoFicha);
-
+        datatratamentoR=findViewById(R.id.textViewDataInicioTratamentoFicha);
+        observacoesR=findViewById(R.id.textViewObservacoesFicha);
+        regimealimentarR=findViewById(R.id.textViewRegimeAlimentarFicha);
+        medicacaoR=findViewById(R.id.textViewMedicacaoFicha);
 
 
 
@@ -121,8 +124,12 @@ public class Ficha_Paciente extends AppCompatActivity {
         String saveSintoma=sintomaR.getText().toString();
         String saveDetalheSintoma=detalheSintomaR.getText().toString();
         String saveEstadoClinico=estadoClinicoR.getText().toString();
+        String saveDataInicioTratamento=datatratamentoR.getText().toString();
+        String saveObservacoes=observacoesR.getText().toString();
+        String saveRegimeAlimentar=regimealimentarR.getText().toString();
+        String saveMedicacao=medicacaoR.getText().toString();
 
-        db.insertData(saveNome,saveGenero,saveDataNascimento,saveContactoEmergencia,saveMorada,saveNumeroCC,saveDataEntradaHospital,saveSintoma,saveDetalheSintoma,saveEstadoClinico);
+        db.insertData(saveNome,saveGenero,saveDataNascimento,saveContactoEmergencia,saveMorada,saveNumeroCC,saveDataEntradaHospital,saveSintoma,saveDetalheSintoma,saveEstadoClinico,saveDataInicioTratamento,saveObservacoes,saveRegimeAlimentar,saveMedicacao);
         Intent intent=new Intent(Ficha_Paciente.this,lista_Pacientes.class);
         startActivity(intent);
     }
