@@ -17,6 +17,7 @@ import org.w3c.dom.Text;
 public class Ficha_Paciente extends AppCompatActivity {
     //base de dados
     TextView nomeR, generoR, datanasR, contactoemR, moradaR, numeroccR, datahospitalR;
+    TextView sintomaR, detalheSintomaR, estadoClinicoR;
     DatabaseHelper db;
 
     @Override
@@ -34,7 +35,9 @@ public class Ficha_Paciente extends AppCompatActivity {
         moradaR=findViewById(R.id.textViewMoradaFicha);
         numeroccR=findViewById(R.id.textViewcartaoFicha);
         datahospitalR=findViewById(R.id.textViewDataEntradaFicha);
-
+        sintomaR=findViewById(R.id.textViewSintomaFicha);
+        detalheSintomaR=findViewById(R.id.textViewSintomaDescFicha);
+        estadoClinicoR=findViewById(R.id.textViewEstadoClinicoFicha);
 
 
 
@@ -105,6 +108,7 @@ public class Ficha_Paciente extends AppCompatActivity {
         textView.setText(data.substring(1, data.length() - 1));
 
     }
+    //inserir na bd
 
     public void AdicionaDados(View view) {
         String saveNome=nomeR.getText().toString();
@@ -114,7 +118,11 @@ public class Ficha_Paciente extends AppCompatActivity {
         String saveMorada=moradaR.getText().toString();
         String saveNumeroCC=numeroccR.getText().toString();
         String saveDataEntradaHospital=datahospitalR.getText().toString();
-        db.insertData(saveNome,saveGenero,saveDataNascimento,saveContactoEmergencia,saveMorada,saveNumeroCC,saveDataEntradaHospital);
+        String saveSintoma=sintomaR.getText().toString();
+        String saveDetalheSintoma=detalheSintomaR.getText().toString();
+        String saveEstadoClinico=estadoClinicoR.getText().toString();
+
+        db.insertData(saveNome,saveGenero,saveDataNascimento,saveContactoEmergencia,saveMorada,saveNumeroCC,saveDataEntradaHospital,saveSintoma,saveDetalheSintoma,saveEstadoClinico);
         Intent intent=new Intent(Ficha_Paciente.this,lista_Pacientes.class);
         startActivity(intent);
     }

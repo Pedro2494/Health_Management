@@ -41,6 +41,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
                 holder.moradaRC.setText(note.getMorada());
                 holder.numero_ccRC.setText(note.getNumero_cc());
                 holder.data_entrada_servicoRC.setText(note.getData_entrada_servico());
+                holder.sintomaRC.setText(note.getSintoma());
+                holder.detalheSintomaRC.setText(note.getDetalheSintoma());
+                holder.estadoclinicoRC.setText(note.getEstadoClinico());
 
                 holder.nomeRC.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
@@ -70,6 +73,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
         public TextView moradaRC;
         public TextView numero_ccRC;
         public TextView data_entrada_servicoRC;
+        public TextView sintomaRC;
+        public TextView detalheSintomaRC;
+        public TextView estadoclinicoRC;
 
         public MyViewHolder(View view) {
             super(view);
@@ -81,15 +87,17 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
             moradaRC = view.findViewById(R.id.moradaitem);
             numero_ccRC = view.findViewById(R.id.numerodeccitem);
             data_entrada_servicoRC = view.findViewById(R.id.dataentradaitem);
-
+            sintomaRC = view.findViewById(R.id.sintomaitem);
+            detalheSintomaRC = view.findViewById(R.id.detalhesintomaitem);
+            estadoclinicoRC = view.findViewById(R.id.estadoclinicoitem);
         }
     }
 
     private void showActionsDialog(final int position) {
-        CharSequence colors[] = new CharSequence[]{"Delete"};
+        CharSequence colors[] = new CharSequence[]{"Eliminar"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Choose option");
+        builder.setTitle("Apagar paciente");
         builder.setItems(colors, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

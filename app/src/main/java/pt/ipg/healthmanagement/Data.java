@@ -10,6 +10,10 @@ public class Data {
     String numero_cc;
     String data_entrada_servico;
 
+    String sintoma;
+    String detalheSintoma;
+    String estadoClinico;
+
     //Create table (query)
 
     public static final String CREATE_TABLE=
@@ -21,9 +25,13 @@ public class Data {
                     "Contacto_emergencia" + " TexT, " +
                     "Morada" + " TexT, " +
                     "Numero_cc" + " TexT, " +
-                    "Data_entrada_servico" + " TexT "+ ")";
+                    "Data_entrada_servico" + " TexT, " +
+                    "Sintoma" + " TexT, " +
+                    "Detalhe_sintoma" + " TexT, " +
+                    "Estado_clinico" + " TexT "+ ")";
 
-    public Data(int id, String nome, String genero, String data_nascimento, String contacto_emergencia, String morada, String numero_cc, String data_entrada_servico) {
+
+    public Data(int id, String nome, String genero, String data_nascimento, String contacto_emergencia, String morada, String numero_cc, String data_entrada_servico, String sintoma, String detalheSintoma, String estadoClinico) {
         this.id = id;
         this.nome = nome;
         this.genero = genero;
@@ -32,6 +40,9 @@ public class Data {
         this.morada = morada;
         this.numero_cc = numero_cc;
         this.data_entrada_servico = data_entrada_servico;
+        this.sintoma = sintoma;
+        this.detalheSintoma = detalheSintoma;
+        this.estadoClinico = estadoClinico;
     }
 
     public Data() {
@@ -100,5 +111,29 @@ public class Data {
 
     public void setData_entrada_servico(String data_entrada_servico) {
         this.data_entrada_servico = data_entrada_servico;
+    }
+
+    public String getSintoma() {
+        return sintoma;
+    }
+
+    public void setSintoma(String sintoma) {
+        this.sintoma = sintoma;
+    }
+
+    public String getDetalheSintoma() {
+        return detalheSintoma;
+    }
+
+    public void setDetalheSintoma(String detalheSintoma) {
+        this.detalheSintoma = detalheSintoma;
+    }
+
+    public String getEstadoClinico() {
+        return estadoClinico;
+    }
+
+    public void setEstadoClinico(String estadoClinico) {
+        this.estadoClinico = estadoClinico;
     }
 }

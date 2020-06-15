@@ -30,7 +30,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-public long insertData(String nomeR, String generoR, String datanasR, String contactoemR, String moradaR, String numeroccR, String datahospitalR){
+public long insertData(String nomeR, String generoR, String datanasR, String contactoemR, String moradaR, String numeroccR, String datahospitalR, String sintomaR, String detalheSintomaR, String estadoClinicoR){
     SQLiteDatabase db=this.getWritableDatabase();
     ContentValues values=new ContentValues();
     values.put("Nome",nomeR);
@@ -40,6 +40,9 @@ public long insertData(String nomeR, String generoR, String datanasR, String con
     values.put("Morada",moradaR);
     values.put("Numero_cc",numeroccR);
     values.put("Data_entrada_servico",datahospitalR);
+    values.put("Sintoma",sintomaR);
+    values.put("Detalhe_sintoma", detalheSintomaR);
+    values.put("EstadoClinico", estadoClinicoR);
     long id=db.insert("Pacientes",null,values);
     db.close();
     return id;
@@ -61,6 +64,9 @@ public long insertData(String nomeR, String generoR, String datanasR, String con
                 note.setMorada(cursor.getString(cursor.getColumnIndex("Morada")));
                 note.setNumero_cc(cursor.getString(cursor.getColumnIndex( "Numero_cc")));
                 note.setData_entrada_servico(cursor.getString(cursor.getColumnIndex("Data_entrada_servico")));
+                note.setSintoma(cursor.getString(cursor.getColumnIndex("Sintoma")));
+                note.setDetalheSintoma(cursor.getString(cursor.getColumnIndex("Detalhe_sintoma")));
+                note.setEstadoClinico(cursor.getString(cursor.getColumnIndex("Estado_clinico")));
                 notes.add(note);
             } while (cursor.moveToNext());
         }
