@@ -112,8 +112,8 @@ public long insertDataMedico(String nomeMR, String funcaoMR, String contactoMR){
                 DataMedico note2 = new DataMedico();
                 note2.setId(cursor2.getInt(cursor2.getColumnIndex("Id")));
                 note2.setNome(cursor2.getString(cursor2.getColumnIndex("Nome")));
-                note2.setNome(cursor2.getString(cursor2.getColumnIndex("Funcao")));
-                note2.setNome(cursor2.getString(cursor2.getColumnIndex("Contacto")));
+                note2.setFuncao(cursor2.getString(cursor2.getColumnIndex("Funcao")));
+                note2.setContacto(cursor2.getString(cursor2.getColumnIndex("Contacto")));
                 notes2.add(note2);
             } while (cursor2.moveToNext());
         }
@@ -134,4 +134,11 @@ public long insertDataMedico(String nomeMR, String funcaoMR, String contactoMR){
 
     //tabela medicos
 
+
+    public void deleteNote2(DataMedico note2) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("Medicos", "Id" + " = ?",
+                new String[]{String.valueOf(note2.getId())});
+        db.close();
+    }
 }

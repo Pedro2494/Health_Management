@@ -15,7 +15,7 @@ public class lista_medicos extends AppCompatActivity {
     private List<DataMedico> notesList2 = new ArrayList<>();
     private RecyclerView recyclerView;
     DatabaseHelper db;
-    public static NotesAdapter mAdapter2;
+    public static NotesAdapterMedico mAdapter2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class lista_medicos extends AppCompatActivity {
         db = new DatabaseHelper(this);
 
         notesList2.addAll(db.getMedicosFromdb());
-        mAdapter2 = new NotesAdapter(this, notesList2);
+        mAdapter2 = new NotesAdapterMedico(this, notesList2);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());

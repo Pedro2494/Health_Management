@@ -1,6 +1,8 @@
 package pt.ipg.healthmanagement;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,12 +31,21 @@ public class NotesAdapterMedico extends RecyclerView.Adapter<NotesAdapterMedico.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         DataMedico note = notesList.get(position);
         holder.idRc.setText(Integer.toString(note.getId()));
         holder.nomeMedicoRc.setText(note.getNome());
         holder.funcaoMedicoRc.setText(note.getFuncao());
         holder.contactoMedicoRc.setText(note.getContacto());
+
+
+        holder.nomeMedicoRc.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                showActionsDialog(position);
+                return false;
+            }
+        });
     }
 
     public NotesAdapterMedico(Context context, List<DataMedico> notesList) {
@@ -63,4 +74,31 @@ public class NotesAdapterMedico extends RecyclerView.Adapter<NotesAdapterMedico.
 
         }
     }
+
+    private void showActionsDialog(final int position) {
+        CharSequence colors[] = new CharSequence[]{"Eliminar"};
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Apagar Medico");
+        builder.setItems(colors, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which == 0) {
+                    deleteNote2(position);
+                }
+            }
+        });
+        builder.show();
+    }
+
+    private void deleteNote2(int position) {
+        // deleting the note from db
+        db = new DatabaseHelper(context);
+        db.deleteNote2(notesList.get(position));
+
+        // removing the note from the list
+        notesList.remove(position);
+        mAdapter2.notifyItemRemoved(position);
+    }
+
 }
