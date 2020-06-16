@@ -44,6 +44,7 @@ public class Data {
                     "Medicacao" + " TexT "+ ")";
 
 
+
     public Data(int id, String nome, String genero, String data_nascimento, String contacto_emergencia, String morada, String numero_cc, String data_entrada_servico, String sintoma, String detalheSintoma, String estadoClinico, String data_inicio_tratamento, String observacoes, String regime_alimentar, String medicacao) {
         this.id = id;
         this.nome = nome;

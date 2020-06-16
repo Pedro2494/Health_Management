@@ -92,7 +92,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/button1_background"
-
+            android:onClick="RegistaMedico"
             android:padding="24dp"
             android:text="@string/submeter"
             android:textColor="#0A3D6E"

@@ -14,7 +14,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 99;
-    private static final String DATABASE_NAME = "Pacientes";
+    private static final String DATABASE_NAME = "Health";
 
     public DatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -23,6 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Data.CREATE_TABLE);
+        db.execSQL(DataMedico.CREATE_TABLE2);
     }
 
     @Override
@@ -52,6 +53,22 @@ public long insertData(String nomeR, String generoR, String datanasR, String con
     db.close();
     return id;
 }
+
+//tabela medicos
+public long insertDataMedico(String nomeMR, String funcaoMR, String contactoMR){
+    SQLiteDatabase db=this.getWritableDatabase();
+    ContentValues values2=new ContentValues();
+    values2.put("Nome",nomeMR);
+    values2.put("funcao",funcaoMR);
+    values2.put("contacto", contactoMR);
+    long id=db.insert("Medicos", null, values2);
+    db.close();
+    return id;
+}
+
+
+
+
 
     public List<Data> getAllDataFromDb(){
         List<Data> notes = new ArrayList<>();
@@ -83,10 +100,38 @@ public long insertData(String nomeR, String generoR, String datanasR, String con
         return notes;
     }
 
+
+    //tabela medico
+    public List<DataMedico>getMedicosFromdb(){
+        List<DataMedico> notes2 = new ArrayList<>();
+        String selectQueryMedico = "SELECT  * FROM " + "Medicos" ;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor2 = db.rawQuery(selectQueryMedico, null);
+        if (cursor2.moveToFirst()) {
+            do {
+                DataMedico note2 = new DataMedico();
+                note2.setId(cursor2.getInt(cursor2.getColumnIndex("Id")));
+                note2.setNome(cursor2.getString(cursor2.getColumnIndex("Nome")));
+                note2.setNome(cursor2.getString(cursor2.getColumnIndex("Funcao")));
+                note2.setNome(cursor2.getString(cursor2.getColumnIndex("Contacto")));
+                notes2.add(note2);
+            } while (cursor2.moveToNext());
+        }
+        db.close();
+        return notes2;
+    }
+
+
+
+
+
     public void deleteNote(Data note) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("Pacientes", "Id" + " = ?",
                 new String[]{String.valueOf(note.getId())});
         db.close();
     }
+
+    //tabela medicos
+
 }
