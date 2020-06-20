@@ -172,11 +172,29 @@ public class Dados_paciente extends AppCompatActivity {
         String regime_alimentar = RegimeAlimentar.getText().toString();
         intent2.putExtra("regime_alimentar", regime_alimentar);
 
-        //lista de medicamentos
 
         //passar para outra activity os medicamentos
 
         intent2.putExtra("itemList", itemList);
+
+//validar dados
+        if (data_inicio_tratamento.length() <= 0) {
+            DataInicioTratamento.setError("Campo obrigatório");
+            DataInicioTratamento.requestFocus();
+            return;
+        }
+
+        if (observacoes.length() <= 0) {
+            Observacoes.setError("Campo obrigatório");
+            Observacoes.requestFocus();
+            return;
+        }
+        if (regime_alimentar.length() <= 0) {
+            RegimeAlimentar.setError("Campo obrigatório");
+            RegimeAlimentar.requestFocus();
+            return;
+        }
+
 
 
         startActivity(intent2);
