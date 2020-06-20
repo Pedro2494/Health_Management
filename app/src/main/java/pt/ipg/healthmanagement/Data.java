@@ -182,4 +182,6 @@ public class Data {
     public void setMedicacao(String medicacao) {
         this.medicacao = medicacao;
     }
+
+
 }

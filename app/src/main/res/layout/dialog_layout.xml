@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Editar dados"
+        android:textColor="#0A3D6E"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/nomeUpdate"
+        android:hint="Inserir nome"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/generoUpdate"
+        android:hint="Inserir genero"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/datadenascimentoUpdate"
+        android:hint="Inserir data de nascimento"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/contactodeemergenciaUpdate"
+        android:hint="Inserir Contacto de emergencia"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/moradaUpdate"
+        android:hint="Inserir Morada"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/numeroccUpdate"
+        android:hint="Inserir numero de cc"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/datadeentradaUpdate"
+        android:hint="Inserir data de entrada no serviço"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/sintomasUpdate"
+        android:hint="Inserir sintomas"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/detalhesintomaUpdate"
+        android:hint="Inserir detalhes dos sintomas"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/estadoclinicoUpdate"
+        android:hint="Inserir estado clinico"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/datatratamentoUpdate"
+        android:hint="Inserir data de inicio do tratamento"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/observacoesUpdate"
+        android:hint="Inserir observações"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/regimealimentarUpdate"
+        android:hint="Inserir regime alimentar"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/medicacaoUpdate"
+        android:hint="Inserir medicação"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+</ScrollView>

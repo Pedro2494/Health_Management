@@ -132,13 +132,36 @@ public long insertDataMedico(String nomeMR, String funcaoMR, String contactoMR){
         db.close();
     }
 
-    //tabela medicos
-
-
+    //elimina tabela medicos
     public void deleteNote2(DataMedico note2) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("Medicos", "Id" + " = ?",
                 new String[]{String.valueOf(note2.getId())});
         db.close();
+    }
+
+//edita dados paciente
+    public int updateNote(Data note) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("Nome", note.getNome());
+        values.put("Genero", note.getGenero());
+        values.put("Data_nascimento", note.getData_nascimento());
+        values.put("Contacto_emergencia", note.getContacto_emergencia());
+        values.put("Morada", note.getMorada());
+        values.put("Numero_cc", note.getNumero_cc());
+        values.put("Data_entrada_servico",note.getData_entrada_servico());
+        values.put("Sintoma", note.getSintoma());
+        values.put("Detalhe_sintoma", note.getDetalheSintoma());
+        values.put("Estado_clinico", note.getEstadoClinico());
+        values.put("Data_inicio_tratamento", note.getData_inicio_tratamento());
+        values.put("Observacoes", note.getObservacoes());
+        values.put("Regime_alimentar", note.getRegime_alimentar());
+        values.put("Medicacao", note.getMedicacao());
+
+        // updating row
+        return db.update("Pacientes", values, "Id" + " = ?",
+                new String[]{String.valueOf(note.getId())});
     }
 }

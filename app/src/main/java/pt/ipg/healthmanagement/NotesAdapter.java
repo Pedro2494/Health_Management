@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -110,14 +111,16 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
     }
 
     private void showActionsDialog(final int position) {
-        CharSequence colors[] = new CharSequence[]{"Eliminar"};
+        CharSequence colors[] = new CharSequence[]{"Edit", "Delete"};
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Apagar paciente");
+        builder.setTitle("Choose option");
         builder.setItems(colors, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (which == 0) {
+                    showDialog(position);
+                } else {
                     deleteNote(position);
                 }
             }
@@ -134,5 +137,98 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
             notesList.remove(position);
             mAdapter1.notifyItemRemoved(position);
         }
+
+    public void showDialog(final int position){
+        LayoutInflater layoutInflaterAndroid = LayoutInflater.from(context);
+        View view = layoutInflaterAndroid.inflate(R.layout.dialog_layout, null);
+
+        AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(context);
+        alertDialogBuilderUserInput.setView(view);
+
+        final EditText inputNoteNome = view.findViewById(R.id.nomeUpdate);
+        final EditText inputNoteGenero = view.findViewById(R.id.generoUpdate);
+        final EditText inputNoteDataNascimento = view.findViewById(R.id.datadenascimentoUpdate);
+        final EditText inputNoteContactoEmergencia = view.findViewById(R.id.contactodeemergenciaUpdate);
+        final EditText inputNoteMorada = view.findViewById(R.id.moradaUpdate);
+        final EditText inputNoteNumeroCC = view.findViewById(R.id.numeroccUpdate);
+        final EditText inputNoteDataEntradaServico = view.findViewById(R.id.datadeentradaUpdate);
+        final EditText inputNoteSintomas = view.findViewById(R.id.sintomasUpdate);
+        final EditText inputNoteDetalhesSintomas = view.findViewById(R.id.detalhesintomaUpdate);
+        final EditText inputNoteEstadoClinico = view.findViewById(R.id.estadoclinicoUpdate);
+        final EditText inputNoteDataInicioTratamento = view.findViewById(R.id.datatratamentoUpdate);
+        final EditText inputNoteObservacoes = view.findViewById(R.id.observacoesUpdate);
+        final EditText inputNoteRegimeAlimentar = view.findViewById(R.id.regimealimentarUpdate);
+        final EditText inputNoteMedicacao = view.findViewById(R.id.medicacaoUpdate);
+
+        alertDialogBuilderUserInput
+                .setCancelable(false)
+                .setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogBox, int id) {
+                        updateNote(inputNoteNome.getText().toString(),
+                                inputNoteGenero.getText().toString(),
+                                inputNoteDataNascimento.getText().toString(),
+                                inputNoteContactoEmergencia.getText().toString(),
+                                inputNoteMorada.getText().toString(),
+                                inputNoteNumeroCC.getText().toString(),
+                                inputNoteDataEntradaServico.getText().toString(),
+                                inputNoteSintomas.getText().toString(),
+                                inputNoteDetalhesSintomas.getText().toString(),
+                                inputNoteEstadoClinico.getText().toString(),
+                                inputNoteDataInicioTratamento.getText().toString(),
+                                inputNoteObservacoes.getText().toString(),
+                                inputNoteRegimeAlimentar.getText().toString(),
+                                inputNoteMedicacao.getText().toString(),
+                                position);
+                     /*   updateNote(inputNoteGenero.getText().toString(), position);
+                        updateNote(inputNoteDataNascimento.getText().toString(), position);
+                        updateNote(inputNoteContactoEmergencia.getText().toString(), position);
+                        updateNote(inputNoteMorada.getText().toString(), position);
+                        updateNote(inputNoteNumeroCC.getText().toString(), position);
+                        updateNote(inputNoteDataEntradaServico.getText().toString(), position);
+                        updateNote(inputNoteSintomas.getText().toString(), position);
+                        updateNote(inputNoteDetalhesSintomas.getText().toString(), position);
+                        updateNote(inputNoteEstadoClinico.getText().toString(), position);
+                        updateNote(inputNoteDataInicioTratamento.getText().toString(), position);
+                        updateNote(inputNoteObservacoes.getText().toString(), position);
+                        updateNote(inputNoteRegimeAlimentar.getText().toString(), position);
+                        updateNote(inputNoteMedicacao.getText().toString(), position); */
+                    }
+                })
+                .setNegativeButton("cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogBox, int id) {
+                                dialogBox.cancel();
+                            }
+                        });
+
+        final AlertDialog alertDialog = alertDialogBuilderUserInput.create();
+        alertDialog.show();
+    }
+
+
+    private void updateNote(String noteNome, String noteGenero, String noteDataNas, String noteContacto, String noteMorada, String noteNumerocc, String noteDataEntrada, String noteSintoma, String noteDetalheSintoma, String noteEstadoClinico, String noteDataTratamento, String noteObservacoes, String noteRegimeAlimentar, String noteMedicacao, int position) {
+        Data n = notesList.get(position);
+        // updating note text
+        n.setNome(noteNome);
+        n.setGenero(noteGenero);
+        n.setData_nascimento(noteDataNas);
+        n.setContacto_emergencia(noteContacto);
+        n.setMorada(noteMorada);
+        n.setNumero_cc(noteNumerocc);
+        n.setData_entrada_servico(noteDataEntrada);
+        n.setSintoma(noteSintoma);
+        n.setDetalheSintoma(noteDetalheSintoma);
+        n.setEstadoClinico(noteEstadoClinico);
+        n.setData_inicio_tratamento(noteDataTratamento);
+        n.setObservacoes(noteObservacoes);
+        n.setRegime_alimentar(noteRegimeAlimentar);
+        n.setMedicacao(noteMedicacao);
+        db = new DatabaseHelper(context);
+        // updating note in db
+        db.updateNote(n);
+        // refreshing the list
+        notesList.set(position, n);
+        mAdapter1.notifyItemChanged(position);
+    }
 
 }
