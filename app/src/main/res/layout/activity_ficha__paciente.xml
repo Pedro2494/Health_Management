@@ -238,48 +238,6 @@
             android:text=""
             android:textSize="16sp" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="#0A3D6E" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/profissional_de_saude_responsav_l"
-            android:textColor="#000000"
-            android:textSize="20sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="#0A3D6E" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="24dp"
-            android:layout_marginTop="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="@string/nome"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textViewNomeMedicoFicha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginStart="8dp"
-                android:text=""
-                android:textSize="16sp" />
-
-        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

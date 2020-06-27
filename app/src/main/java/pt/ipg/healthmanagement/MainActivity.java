@@ -121,8 +121,20 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if (contacto_de_emergencia.length() >= 10) {
+            ContactoEmergencia.setError("contacto inválido");
+            ContactoEmergencia.requestFocus();
+            return;
+        }
+
         if (numero_CC.length() <= 0) {
             NumeroCC.setError("Número de CC obrigatório");
+            NumeroCC.requestFocus();
+            return;
+        }
+
+        if (numero_CC.length() >= 9) {
+            NumeroCC.setError("Número de CC inválido");
             NumeroCC.requestFocus();
             return;
         }

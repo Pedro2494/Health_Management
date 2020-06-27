@@ -179,19 +179,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
                                 inputNoteRegimeAlimentar.getText().toString(),
                                 inputNoteMedicacao.getText().toString(),
                                 position);
-                     /*   updateNote(inputNoteGenero.getText().toString(), position);
-                        updateNote(inputNoteDataNascimento.getText().toString(), position);
-                        updateNote(inputNoteContactoEmergencia.getText().toString(), position);
-                        updateNote(inputNoteMorada.getText().toString(), position);
-                        updateNote(inputNoteNumeroCC.getText().toString(), position);
-                        updateNote(inputNoteDataEntradaServico.getText().toString(), position);
-                        updateNote(inputNoteSintomas.getText().toString(), position);
-                        updateNote(inputNoteDetalhesSintomas.getText().toString(), position);
-                        updateNote(inputNoteEstadoClinico.getText().toString(), position);
-                        updateNote(inputNoteDataInicioTratamento.getText().toString(), position);
-                        updateNote(inputNoteObservacoes.getText().toString(), position);
-                        updateNote(inputNoteRegimeAlimentar.getText().toString(), position);
-                        updateNote(inputNoteMedicacao.getText().toString(), position); */
+
                     }
                 })
                 .setNegativeButton("Cancelar",

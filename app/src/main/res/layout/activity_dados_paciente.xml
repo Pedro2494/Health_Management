@@ -247,47 +247,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/profissional_de_saude_responsav_l"
-            android:textColor="#0A3D6E"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/campos_a_preencher"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="#0A3D6E" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/nome"
-            android:textColor="#000000"
-            android:textSize="16sp" />
-
-        <Spinner
-            android:id="@+id/NomePro"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="8dp"
-            android:background="#0A3D6E" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="@string/tratamento"
             android:textColor="#0A3D6E"
             android:textSize="20sp" />
